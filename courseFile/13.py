@@ -14,4 +14,5 @@ for i in range(5):
     save_name("names.txt")
 show_names("names.txt")
 
-
+def avi(a):
+    print(a)
