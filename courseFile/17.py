@@ -10,6 +10,8 @@ def dec(function_to_run):
         function_to_run()
         print(datetime.datetime.now())
 
+
+
     return wrapper
 
 @dec
