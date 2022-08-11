@@ -17,5 +17,6 @@ for i in range(5):
 show_names("names.txt")
 
 
+
 def ruth(r):
     print(r)
