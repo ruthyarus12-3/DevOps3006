@@ -10,8 +10,12 @@ def show_names(names_file):
     for name in my_file.readlines():
         print(name, end='')
     my_file.close()
+
+
 for i in range(5):
     save_name("names.txt")
 show_names("names.txt")
 
 
+def ruth(r):
+    print(r)
