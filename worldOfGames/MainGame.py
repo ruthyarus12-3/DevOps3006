@@ -1,9 +1,9 @@
-from Live import test_load_game, welcome
+from Live import load_game, welcome
 from GuessGame import *
 from worldOfGames.MemoryGame import MemoryGame
 
 print(welcome("Guy"))
-test_load_game()
+load_game()
 guess = GuessGame(10)
 print(guess.play())
 

@@ -1,3 +1,4 @@
+from worldOfGames import Score
 from worldOfGames.CurrencyRouletteGame import CurrencyRouletteGame
 from worldOfGames.GuessGame import GuessGame
 from worldOfGames.MemoryGame import MemoryGame
@@ -40,38 +41,20 @@ switcher = {
 }
 
 
-def test_load_game():
+def load_game():
     game = select_game()
     difficulty = select_difficulty()
     game_dict.get(int(game))
     print(
         f"You've selected {game_dict.get(int(game))} game with {difficulty_dict.get(int(difficulty))} difficulty stage")
     game = game_dict.get(int(game))
-    switcher.get(game, default)()
-
-    # def switch(env):
-    #     return switcher.get(env, default)()
-
+    if switcher.get(game, default)() is True:
+        Score.add_score(difficulty)
 
 def default():
     print("DEFAULT")
     memory_game = MemoryGame(1)
     memory_game.play()
-
-
-# def start_a_game(game, difficulty):
-#     match game:
-#         case "1":
-#             memory_game = MemoryGame(difficulty)
-#             memory_game.play()
-#         case "2":
-#             guess_game = GuessGame(difficulty)
-#             guess_game.play()
-#         case "3":
-#             currency_roulette_game = CurrencyRouletteGame(difficulty)
-#             currency_roulette_game.play()
-# case _:
-#     return 0
 
 
 def game_instructions():

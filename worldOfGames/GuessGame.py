@@ -16,7 +16,7 @@ class GuessGame:
 
     def get_guess_from_user(self):
         print(f"Enter a number between 1 to {self.difficulty}")
-        user_guess = input()
+        user_guess = int(input())
         while int(user_guess) < 1 or int(user_guess) > self.difficulty:
             print("Out of range. Please try again")
             user_guess = input()
@@ -30,3 +30,8 @@ class GuessGame:
         self.generate_number()
         self.get_guess_from_user()
         return int(self.secret_number) == int(self.user_guess)
+
+
+if __name__ == '__main__':
+    first_guess = GuessGame()
+    print(first_guess.play())
