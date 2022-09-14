@@ -7,7 +7,8 @@ class CurrencyRouletteGame:
         self.difficulty = difficulty
 
     def get_money_interval(self, current_currency_rate):
-        return [(current_currency_rate - (5 - int(self.difficulty)), current_currency_rate + (5 - int(self.difficulty)))]
+        return [
+            (current_currency_rate - (5 - int(self.difficulty)), current_currency_rate + (5 - int(self.difficulty)))]
 
     def get_guess_from_user(self):
         print("guess the amount of the USD")
@@ -29,8 +30,6 @@ class CurrencyRouletteGame:
             print("Ohh... Maybe next time")
 
 
-
-if __name__ == '__main__':
-    first_guess = CurrencyRouletteGame()
-    first_guess.play()
-
+# if __name__ == '__main__':
+#     first_guess = CurrencyRouletteGame()
+#     first_guess.play()

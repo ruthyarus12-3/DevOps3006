@@ -22,7 +22,6 @@ class GuessGame:
             user_guess = input()
         self.user_guess = user_guess
 
-
     def compare_results(self):
         return self.secret_number == self.user_guess
 
@@ -31,7 +30,6 @@ class GuessGame:
         self.get_guess_from_user()
         return int(self.secret_number) == int(self.user_guess)
 
-
-if __name__ == '__main__':
-    first_guess = GuessGame()
-    print(first_guess.play())
+# if __name__ == '__main__':
+#     first_guess = GuessGame()
+#     print(first_guess.play())

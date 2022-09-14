@@ -4,7 +4,7 @@ from worldOfGames import Utils
 def add_score(difficulty):
     try:
         with open(Utils.SCORES_FILE_NAME, 'r+') as file:
-            scores = file.read().splitlines()
+            file.read().splitlines()
 
     except FileNotFoundError:
         with open(Utils.SCORES_FILE_NAME, 'w') as file:

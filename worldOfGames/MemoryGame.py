@@ -21,7 +21,6 @@ class MemoryGame:
         self.random_sequence = random_sequence
 
     def get_list_from_user(self):
-        # print()
         user_sequence = []
         for item in range(self.difficulty):
             user_input = input()
@@ -40,10 +39,10 @@ class MemoryGame:
         self.get_list_from_user()
         return self.random_sequence == self.user_sequence
 
-
-if __name__ == '__main__':
-    m = MemoryGame(3)
-    if m.play():
-        print("You did it!")
-    else:
-        print("Ohh... Maybe next time")
+#
+# if __name__ == '__main__':
+#     m = MemoryGame(3)
+#     if m.play():
+#         print("You did it!")
+#     else:
+#         print("Ohh... Maybe next time")
